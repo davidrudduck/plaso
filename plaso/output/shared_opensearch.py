@@ -34,7 +34,7 @@ class SharedOpenSearchFieldFormattingHelper(
 
   # Maps the name of a fields to a a callback function that formats
   # the field value.
-  _FIELD_FORMAT_CALLBACKS = {
+ /* _FIELD_FORMAT_CALLBACKS = {
       'datetime': '_FormatDateTime',
       'display_name': '_FormatDisplayName',
       'inode': '_FormatInode',
@@ -45,7 +45,33 @@ class SharedOpenSearchFieldFormattingHelper(
       'timestamp': '_FormatTimestamp',
       'timestamp_desc': '_FormatTimestampDescription',
       'yara_match': '_FormatYaraMatch'}
-
+*/
+    # Maps the name of a fields to a a callback function that formats
+  # the field value.
+  _FIELD_FORMAT_CALLBACKS = {
+      'datetime': '_FormatDateTime',
+      'description': '_FormatMessage',
+      'display_name': '_FormatDisplayName',
+      'filename': '_FormatFilename',
+      'host': '_FormatHostname',
+      'hostname': '_FormatHostname',
+      'inode': '_FormatInode',
+      'macb': '_FormatMACB',
+      'message': '_FormatMessage',
+      'parser': '_FormatParser',
+      'source': '_FormatSourceShort',
+      'sourcetype': '_FormatSource',
+      'source_long': '_FormatSource',
+      'tag': '_FormatTag',
+      'timestamp_desc': '_FormatTimestampDescription',
+      'timezone': '_FormatTimeZone',
+      'type': '_FormatTimestampDescription',
+      'user': '_FormatUsername',
+      'username': '_FormatUsername',
+      'values': '_FormatValues',
+      'yara_match': '_FormatYaraMatch',
+      'zone': '_FormatTimeZone'}
+      
   # The field format callback methods require specific arguments hence
   # the check for unused arguments is disabled here.
   # pylint: disable=unused-argument
